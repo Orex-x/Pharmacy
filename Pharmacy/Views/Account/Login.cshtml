@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Pharmacy.ViewModels.LoginModel
+
+@{
+    Layout = "_Layout";
+}
+
+<form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
+    <div class="input-form">
+        <input asp-for="Login" type="text" placeholder="Login" />
+        <span asp-validation-for="Login"></span>
+    </div>
+    
+    <div class="input-form">
+        <input asp-for="Password" type="password" placeholder="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+
+    <div class="input-form">
+        <input class="enter" type="submit" value="Sign in">
+    </div>
+    
+    <div class="input-form">
+        <a class="Registration" asp-action="Register" asp-controller="Account">Sign up</a>
+    </div>
+</form>

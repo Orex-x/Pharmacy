@@ -1,0 +1,15 @@
+﻿@model User
+
+@{
+    Layout = "_Layout";
+}
+
+
+<h2>@Model.Name</h2>
+<h2>@Model.Login</h2>
+
+<form asp-action="Logout" asp-controller="Account" asp-anti-forgery="true">
+    <div>
+        <input type="submit" value="Log out" />
+    </div>
+</form>

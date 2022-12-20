@@ -1,0 +1,31 @@
+﻿@model bool
+
+@{
+    Layout = "_Layout";
+}
+
+@if (Model)
+{
+    <form asp-action="Dump" asp-controller="Home" asp-anti-forgery="true">
+        <div>
+            <input type="submit" value="Dump" />
+        </div>
+    </form>
+
+    <form asp-action="Restore" asp-controller="Home" asp-anti-forgery="true">
+        <div>
+            <input type="submit" value="Restore" />
+        </div>
+    </form>
+
+    <form asp-action="Logout" asp-controller="Account" asp-anti-forgery="true">
+        <div>
+            <input type="submit" value="Log out" />
+        </div>
+    </form>
+}
+else
+{
+    <h1>У вас нет прав для бэкапа базы данных</h1>
+}
+
